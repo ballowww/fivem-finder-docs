@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kebijakan Privasi — FiveM Player Finder</title>
+<title>Kebijakan Privasi / Privacy Policy — FiveM Player Finder</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -39,19 +39,49 @@
     max-width:760px;margin:0 auto;
     display:flex;align-items:center;justify-content:space-between;
     padding:18px 24px;
+    gap:16px;
   }
   .wordmark{
     font-family:'Space Grotesk',sans-serif;
     font-weight:700;
     font-size:1rem;
     letter-spacing:.02em;
+    white-space:nowrap;
   }
   .wordmark span{color:var(--accent);}
+  .topbar-right{display:flex;align-items:center;gap:16px;}
   .topnav{display:flex;gap:18px;font-size:.85rem;font-family:'JetBrains Mono',monospace;}
   .topnav a{border-bottom:none;color:var(--muted);}
   .topnav a.active{color:var(--text);border-bottom:1px solid var(--accent);}
 
+  .lang-toggle{
+    display:flex;gap:2px;
+    background:var(--mono-bg);
+    border-radius:999px;
+    padding:3px;
+  }
+  .lang-toggle button{
+    font-family:'JetBrains Mono',monospace;
+    font-size:.75rem;
+    border:none;background:none;cursor:pointer;
+    padding:4px 10px;border-radius:999px;
+    color:var(--muted);
+    line-height:1.4;
+  }
+  .lang-toggle button.active{
+    background:var(--bg);color:var(--text);
+    box-shadow:0 1px 2px rgba(0,0,0,.06);
+  }
+
   main{max-width:760px;margin:0 auto;padding:48px 24px 96px;}
+
+  /* language visibility */
+  main>[data-lang-content]{display:none;}
+  html[data-lang="id"] main>[data-lang-content="id"]{display:block;}
+  html[data-lang="en"] main>[data-lang-content="en"]{display:block;}
+  footer [data-lang-content]{display:none;}
+  html[data-lang="id"] footer [data-lang-content="id"]{display:inline;}
+  html[data-lang="en"] footer [data-lang-content="en"]{display:inline;}
 
   .doc-head{margin-bottom:56px;}
   .doc-eyebrow{
@@ -130,6 +160,7 @@
     section{grid-template-columns:1fr;gap:8px;}
     .section-label{padding-top:0;}
     h1{font-size:1.9rem;}
+    .topbar-inner{flex-wrap:wrap;}
   }
 
   @media (prefers-reduced-motion: no-preference){
@@ -154,113 +185,238 @@
 <header class="topbar">
   <div class="topbar-inner">
     <div class="wordmark">FiveM<span>Finder</span></div>
-    <nav class="topnav">
-      <a href="privacy-policy.html" class="active">privacy-policy</a>
-      <a href="terms-of-service.html">terms-of-service</a>
-    </nav>
+    <div class="topbar-right">
+      <nav class="topnav">
+        <a href="privacy-policy.html" class="active">privacy-policy</a>
+        <a href="terms-of-service.html">terms-of-service</a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="id">ID</button>
+        <button type="button" data-lang="en" class="active">EN</button>
+      </div>
+    </div>
   </div>
 </header>
 
 <main>
-  <div class="doc-head">
-    <p class="doc-eyebrow">// legal_docs / privacy</p>
-    <h1>Kebijakan Privasi</h1>
-    <p class="meta">terakhir_diperbarui: [isi tanggal] · berlaku_untuk: FiveM Player Finder</p>
+
+  <!-- ===================== INDONESIAN ===================== -->
+  <div data-lang-content="id">
+
+    <div class="doc-head">
+      <p class="doc-eyebrow">// legal_docs / privacy</p>
+      <h1>Kebijakan Privasi</h1>
+      <p class="meta">terakhir_diperbarui: 15 June 2026 · berlaku_untuk: FiveM Player Finder</p>
+    </div>
+
+    <p>Kebijakan Privasi ini menjelaskan bagaimana <strong>FiveM Player Finder</strong> ("Bot", "kami") mengumpulkan, menggunakan, dan melindungi informasi Anda saat menggunakan Bot di Discord.</p>
+
+    <section>
+      <div class="section-label">01</div>
+      <div>
+        <h2>Data yang Kami Kumpulkan</h2>
+        <p>Saat Anda menggunakan command Bot (misalnya <span class="highlight">!cari</span>), kami dapat mengumpulkan data berikut:</p>
+        <ul>
+          <li><strong>Username dan ID Discord</strong> Anda, untuk keperluan pencatatan log penggunaan (misalnya melacak batas penggunaan/limit fitur dan status subscription).</li>
+          <li><strong>ID Server (Guild) Discord</strong> tempat Bot digunakan, untuk keperluan konfigurasi dan pengelolaan subscription per server.</li>
+          <li><strong>Parameter command</strong> yang Anda kirim (misalnya nama server FiveM yang ingin dicari), digunakan secara real-time untuk memproses permintaan Anda.</li>
+        </ul>
+        <div class="callout">Kami <strong>tidak menyimpan isi pesan (message content)</strong> Anda secara permanen. Bot hanya membaca pesan untuk mendeteksi command (sistem prefix command) dan tidak menyimpan teks pesan tersebut di luar proses itu.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">02</div>
+      <div>
+        <h2>Bagaimana Kami Menggunakan Data</h2>
+        <p>Data yang dikumpulkan digunakan untuk:</p>
+        <ul>
+          <li>Memproses dan menjalankan command yang Anda minta.</li>
+          <li>Mencatat riwayat penggunaan Bot untuk keperluan analitik internal dan pengelolaan subscription/limit.</li>
+          <li>Memberikan dukungan (support) jika Anda mengalami masalah dengan Bot.</li>
+          <li>Meningkatkan kualitas dan performa Bot.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">03</div>
+      <div>
+        <h2>Data dari Pihak Ketiga</h2>
+        <p>Untuk menampilkan informasi server dan pemain FiveM, Bot mengambil data secara real-time dari API Penyedia. Data ini bukan data pribadi pengguna Discord, melainkan data publik server game FiveM.</p>
+        <p>Jika Bot menyediakan fitur berbayar, proses pembayaran dapat melibatkan pihak ketiga seperti penyedia QRIS. Kami hanya menerima konfirmasi status pembayaran dan tidak menyimpan data sensitif seperti nomor kartu/rekening Anda.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">04</div>
+      <div>
+        <h2>Penyimpanan &amp; Keamanan Data</h2>
+        <ul>
+          <li>Data log penggunaan (username, ID Discord, ID server) disimpan di server/database milik kami dengan langkah-langkah keamanan yang wajar untuk mencegah akses tidak sah.</li>
+          <li>Data disimpan selama akun/server Anda masih aktif menggunakan Bot, atau sesuai kebutuhan untuk keperluan subscription.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">05</div>
+      <div>
+        <h2>Hak Pengguna</h2>
+        <ul>
+          <li>Anda dapat menghentikan pengumpulan data dengan tidak menggunakan command Bot, atau dengan mengeluarkan (kick) Bot dari server Discord Anda.</li>
+          <li>Anda dapat meminta penghapusan data log Anda dengan menghubungi kami melalui kontak di bawah.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">06</div>
+      <div>
+        <h2>Privasi Anak</h2>
+        <p>Bot ini tidak ditujukan untuk anak-anak di bawah usia minimum yang ditetapkan oleh Discord Terms of Service (saat ini 13 tahun, atau usia minimum yang lebih tinggi di wilayah tertentu).</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">07</div>
+      <div>
+        <h2>Perubahan Kebijakan</h2>
+        <p>Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Perubahan signifikan akan diumumkan melalui server Discord Support.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">08</div>
+      <div>
+        <h2>Kontak</h2>
+        <p>Jika Anda memiliki pertanyaan mengenai Kebijakan Privasi ini atau ingin meminta penghapusan data, silakan hubungi kami melalui:</p>
+        <ul>
+          <li>Server Discord Support: <a href="https://discord.gg/5TQTfSnSNp">https://discord.gg/5TQTfSnSNp</a></li>
+          <li>Email: <a href="mailto:iqballoww@gmail.com">iqballoww@gmail.com</a></li>
+        </ul>
+      </div>
+    </section>
+
   </div>
 
-  <p>Kebijakan Privasi ini menjelaskan bagaimana <strong>FiveM Player Finder</strong> ("Bot", "kami") mengumpulkan, menggunakan, dan melindungi informasi Anda saat menggunakan Bot di Discord.</p>
+  <!-- ===================== ENGLISH ===================== -->
+  <div data-lang-content="en">
 
-  <section id="data-dikumpulkan">
-    <div class="section-label">01</div>
-    <div>
-      <h2>Data yang Kami Kumpulkan</h2>
-      <p>Saat Anda menggunakan command Bot (misalnya <span class="highlight">!cari</span>), kami dapat mengumpulkan data berikut:</p>
-      <ul>
-        <li><strong>Username dan ID Discord</strong> Anda, untuk keperluan pencatatan log penggunaan (misalnya melacak batas penggunaan/limit fitur dan status subscription).</li>
-        <li><strong>ID Server (Guild) Discord</strong> tempat Bot digunakan, untuk keperluan konfigurasi dan pengelolaan subscription per server.</li>
-        <li><strong>Parameter command</strong> yang Anda kirim (misalnya nama server FiveM yang ingin dicari), digunakan secara real-time untuk memproses permintaan Anda.</li>
-      </ul>
-      <div class="callout">Kami <strong>tidak menyimpan isi pesan (message content)</strong> Anda secara permanen. Bot hanya membaca pesan untuk mendeteksi command (sistem prefix command) dan tidak menyimpan teks pesan tersebut di luar proses itu.</div>
+    <div class="doc-head">
+      <p class="doc-eyebrow">// legal_docs / privacy</p>
+      <h1>Privacy Policy</h1>
+      <p class="meta">last_updated: 15 June 2026 · applies_to: FiveM Player Finder</p>
     </div>
-  </section>
 
-  <section id="penggunaan-data">
-    <div class="section-label">02</div>
-    <div>
-      <h2>Bagaimana Kami Menggunakan Data</h2>
-      <p>Data yang dikumpulkan digunakan untuk:</p>
-      <ul>
-        <li>Memproses dan menjalankan command yang Anda minta.</li>
-        <li>Mencatat riwayat penggunaan Bot untuk keperluan analitik internal dan pengelolaan subscription/limit.</li>
-        <li>Memberikan dukungan (support) jika Anda mengalami masalah dengan Bot.</li>
-        <li>Meningkatkan kualitas dan performa Bot.</li>
-      </ul>
-    </div>
-  </section>
+    <p>This Privacy Policy explains how <strong>FiveM Player Finder</strong> ("Bot", "we") collects, uses, and protects your information when you use the Bot on Discord.</p>
 
-  <section id="pihak-ketiga">
-    <div class="section-label">03</div>
-    <div>
-      <h2>Data dari Pihak Ketiga</h2>
-      <p>Untuk menampilkan informasi server dan pemain FiveM, Bot mengambil data secara real-time dari API publik milik Cfx.re/FiveM (<span class="highlight">cfx-services.net</span>). Data ini bukan data pribadi pengguna Discord, melainkan data publik server game FiveM.</p>
-      <p>Jika Bot menyediakan fitur berbayar, proses pembayaran dapat melibatkan pihak ketiga seperti penyedia QRIS, Saweria, atau Trakteer. Kami hanya menerima konfirmasi status pembayaran dan tidak menyimpan data sensitif seperti nomor kartu/rekening Anda.</p>
-    </div>
-  </section>
+    <section>
+      <div class="section-label">01</div>
+      <div>
+        <h2>Data We Collect</h2>
+        <p>When you use a Bot command (e.g. <span class="highlight">!cari</span>), we may collect the following data:</p>
+        <ul>
+          <li>Your <strong>Discord username and ID</strong>, for usage logging purposes (e.g. tracking feature usage limits and subscription status).</li>
+          <li>The <strong>Discord Server (Guild) ID</strong> where the Bot is used, for configuration and per-server subscription management.</li>
+          <li><strong>Command parameters</strong> you send (e.g. the FiveM server name you want to search for), used in real time to process your request.</li>
+        </ul>
+        <div class="callout">We <strong>do not permanently store your message content</strong>. The Bot only reads messages to detect commands (a prefix command system) and does not store the message text beyond that process.</div>
+      </div>
+    </section>
 
-  <section id="penyimpanan">
-    <div class="section-label">04</div>
-    <div>
-      <h2>Penyimpanan &amp; Keamanan Data</h2>
-      <ul>
-        <li>Data log penggunaan (username, ID Discord, ID server) disimpan di server/database milik kami dengan langkah-langkah keamanan yang wajar untuk mencegah akses tidak sah.</li>
-        <li>Data disimpan selama akun/server Anda masih aktif menggunakan Bot, atau sesuai kebutuhan untuk keperluan subscription.</li>
-      </ul>
-    </div>
-  </section>
+    <section>
+      <div class="section-label">02</div>
+      <div>
+        <h2>How We Use Data</h2>
+        <p>The data collected is used to:</p>
+        <ul>
+          <li>Process and run the commands you request.</li>
+          <li>Log Bot usage history for internal analytics and subscription/limit management.</li>
+          <li>Provide support if you experience issues with the Bot.</li>
+          <li>Improve the quality and performance of the Bot.</li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="hak-pengguna">
-    <div class="section-label">05</div>
-    <div>
-      <h2>Hak Pengguna</h2>
-      <ul>
-        <li>Anda dapat menghentikan pengumpulan data dengan tidak menggunakan command Bot, atau dengan mengeluarkan (kick) Bot dari server Discord Anda.</li>
-        <li>Anda dapat meminta penghapusan data log Anda dengan menghubungi kami melalui kontak di bawah.</li>
-      </ul>
-    </div>
-  </section>
+    <section>
+      <div class="section-label">03</div>
+      <div>
+        <h2>Third-Party Data</h2>
+        <p>To display FiveM server and player information, the Bot fetches data in real time from a provider API. This data is not Discord users' personal data, but public FiveM game server data.</p>
+        <p>If the Bot offers paid features, the payment process may involve third parties such as QRIS providers. We only receive payment status confirmation and do not store sensitive data such as your card or account numbers.</p>
+      </div>
+    </section>
 
-  <section id="privasi-anak">
-    <div class="section-label">06</div>
-    <div>
-      <h2>Privasi Anak</h2>
-      <p>Bot ini tidak ditujukan untuk anak-anak di bawah usia minimum yang ditetapkan oleh Discord Terms of Service (saat ini 13 tahun, atau usia minimum yang lebih tinggi di wilayah tertentu). Kami tidak secara sengaja mengumpulkan data dari anak di bawah usia tersebut.</p>
-    </div>
-  </section>
+    <section>
+      <div class="section-label">04</div>
+      <div>
+        <h2>Data Storage &amp; Security</h2>
+        <ul>
+          <li>Usage log data (username, Discord ID, server ID) is stored on our own servers/database with reasonable security measures to prevent unauthorized access.</li>
+          <li>Data is stored for as long as your account/server remains active with the Bot, or as needed for subscription purposes.</li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="perubahan">
-    <div class="section-label">07</div>
-    <div>
-      <h2>Perubahan Kebijakan</h2>
-      <p>Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Perubahan signifikan akan diumumkan melalui [isi: server Discord support / changelog bot].</p>
-    </div>
-  </section>
+    <section>
+      <div class="section-label">05</div>
+      <div>
+        <h2>User Rights</h2>
+        <ul>
+          <li>You can stop data collection by not using Bot commands, or by removing (kicking) the Bot from your Discord server.</li>
+          <li>You can request deletion of your log data by contacting us using the details below.</li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="kontak">
-    <div class="section-label">08</div>
-    <div>
-      <h2>Kontak</h2>
-      <p>Jika Anda memiliki pertanyaan mengenai Kebijakan Privasi ini atau ingin meminta penghapusan data, silakan hubungi kami melalui:</p>
-      <ul>
-        <li>Server Discord Support: <a href="#">[isi link]</a></li>
-        <li>Email: <a href="mailto:isi@email.com">[isi email]</a></li>
-      </ul>
-    </div>
-  </section>
+    <section>
+      <div class="section-label">06</div>
+      <div>
+        <h2>Children's Privacy</h2>
+        <p>This Bot is not intended for children under the minimum age set by Discord's Terms of Service (currently 13, or a higher minimum age in certain regions).</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">07</div>
+      <div>
+        <h2>Changes to this Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Significant changes will be announced via our Discord support server.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">08</div>
+      <div>
+        <h2>Contact</h2>
+        <p>If you have questions about this Privacy Policy or wish to request data deletion, please contact us via:</p>
+        <ul>
+          <li>Discord Support Server: <a href="https://discord.gg/5TQTfSnSNp">https://discord.gg/5TQTfSnSNp</a></li>
+          <li>Email: <a href="mailto:iqballoww@gmail.com">iqballoww@gmail.com</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
 </main>
 
 <footer>
-  © [isi tahun] FiveM Player Finder — Kebijakan Privasi
+  <span data-lang-content="id">© 2025 FiveM Player Finder — Kebijakan Privasi</span>
+  <span data-lang-content="en">© 2025 FiveM Player Finder — Privacy Policy</span>
 </footer>
+
+<script>
+  document.querySelectorAll('.lang-toggle button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.documentElement.setAttribute('data-lang', btn.dataset.lang);
+      document.querySelectorAll('.lang-toggle button').forEach(function(b){
+        b.classList.toggle('active', b === btn);
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
