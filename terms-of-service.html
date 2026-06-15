@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syarat &amp; Ketentuan — FiveM Player Finder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAF8F4;
+    --text:#1C1B1A;
+    --muted:#7A766E;
+    --accent:#FF5E2D;
+    --line:#E6E1D8;
+    --mono-bg:#F1ECE3;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor;}
+  a:hover{opacity:.75;}
+
+  header.topbar{
+    border-bottom:1px solid var(--line);
+    position:sticky;top:0;
+    background:var(--bg);
+    z-index:10;
+  }
+  .topbar-inner{
+    max-width:760px;margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 24px;
+  }
+  .wordmark{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    font-size:1rem;
+    letter-spacing:.02em;
+  }
+  .wordmark span{color:var(--accent);}
+  .topnav{display:flex;gap:18px;font-size:.85rem;font-family:'JetBrains Mono',monospace;}
+  .topnav a{border-bottom:none;color:var(--muted);}
+  .topnav a.active{color:var(--text);border-bottom:1px solid var(--accent);}
+
+  main{max-width:760px;margin:0 auto;padding:48px 24px 96px;}
+
+  .doc-head{margin-bottom:56px;}
+  .doc-eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:.78rem;
+    color:var(--muted);
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    margin:0 0 12px;
+  }
+  h1{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    font-size:2.4rem;
+    margin:0 0 8px;
+    letter-spacing:-.01em;
+  }
+  .meta{
+    font-family:'JetBrains Mono',monospace;
+    font-size:.85rem;
+    color:var(--muted);
+    margin:0;
+  }
+
+  section{
+    display:grid;
+    grid-template-columns:64px 1fr;
+    gap:24px;
+    padding:32px 0;
+    border-top:1px solid var(--line);
+  }
+  .section-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:.85rem;
+    color:var(--accent);
+    padding-top:4px;
+  }
+  section h2{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:1.25rem;
+    font-weight:700;
+    margin:0 0 12px;
+  }
+  section p{margin:0 0 14px;color:var(--text);}
+  section p:last-child{margin-bottom:0;}
+  section ul{margin:0 0 14px;padding-left:1.2em;}
+  section ul:last-child{margin-bottom:0;}
+  section li{margin-bottom:8px;}
+  .highlight{
+    background:var(--mono-bg);
+    border-radius:6px;
+    padding:2px 6px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:.85em;
+  }
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:32px 24px;
+    text-align:center;
+    font-family:'JetBrains Mono',monospace;
+    font-size:.8rem;
+    color:var(--muted);
+  }
+
+  @media (max-width:600px){
+    section{grid-template-columns:1fr;gap:8px;}
+    .section-label{padding-top:0;}
+    h1{font-size:1.9rem;}
+  }
+
+  @media (prefers-reduced-motion: no-preference){
+    section{animation:fade-in .5s ease both;}
+    section:nth-of-type(1){animation-delay:.02s;}
+    section:nth-of-type(2){animation-delay:.04s;}
+    section:nth-of-type(3){animation-delay:.06s;}
+    section:nth-of-type(4){animation-delay:.08s;}
+    section:nth-of-type(5){animation-delay:.10s;}
+    section:nth-of-type(6){animation-delay:.12s;}
+    section:nth-of-type(7){animation-delay:.14s;}
+    section:nth-of-type(8){animation-delay:.16s;}
+    section:nth-of-type(9){animation-delay:.18s;}
+    section:nth-of-type(10){animation-delay:.20s;}
+    section:nth-of-type(11){animation-delay:.22s;}
+    @keyframes fade-in{
+      from{opacity:0;transform:translateY(6px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="wordmark">FiveM<span>Finder</span></div>
+    <nav class="topnav">
+      <a href="privacy-policy.html">privacy-policy</a>
+      <a href="terms-of-service.html" class="active">terms-of-service</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="doc-head">
+    <p class="doc-eyebrow">// legal_docs / terms</p>
+    <h1>Syarat &amp; Ketentuan Layanan</h1>
+    <p class="meta">terakhir_diperbarui: [isi tanggal] · berlaku_untuk: FiveM Player Finder</p>
+  </div>
+
+  <p>Selamat datang di <strong>FiveM Player Finder</strong> ("Layanan", "Bot", "kami"). Dengan menambahkan, mengakses, atau menggunakan Bot ini di server Discord Anda, Anda ("Pengguna") setuju untuk terikat oleh Syarat &amp; Ketentuan ("Ketentuan") berikut. Jika Anda tidak setuju dengan Ketentuan ini, mohon untuk tidak menggunakan Bot.</p>
+
+  <section id="deskripsi">
+    <div class="section-label">01</div>
+    <div>
+      <h2>Deskripsi Layanan</h2>
+      <p>FiveM Player Finder adalah bot Discord yang menyediakan informasi mengenai pemain dan status server pada game FiveM (modifikasi multiplayer untuk Grand Theft Auto V), dengan mengambil data dari API publik penyedia layanan FiveM (<span class="highlight">cfx-services.net</span>). Bot ditawarkan secara gratis dengan fitur terbatas, dan/atau melalui skema berbayar (subscription) untuk akses fitur tambahan.</p>
+    </div>
+  </section>
+
+  <section id="akun-subscription">
+    <div class="section-label">02</div>
+    <div>
+      <h2>Penggunaan Akun &amp; Subscription</h2>
+      <ul>
+        <li>Beberapa fitur Bot hanya dapat diakses melalui paket subscription berbayar.</li>
+        <li>Subscription bersifat per server/per pengguna sesuai paket yang dipilih saat pembelian, dan berlaku selama periode yang telah disepakati.</li>
+        <li>Pembayaran dilakukan melalui metode yang disediakan (contoh: QRIS, transfer bank, Saweria/Trakteer, atau metode lain yang kami informasikan).</li>
+        <li>Kami berhak melakukan verifikasi pembayaran sebelum mengaktifkan fitur berbayar.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="refund">
+    <div class="section-label">03</div>
+    <div>
+      <h2>Kebijakan Pengembalian Dana (Refund)</h2>
+      <ul>
+        <li>Pembayaran subscription pada dasarnya bersifat final dan tidak dapat dikembalikan, kecuali terjadi kesalahan teknis dari pihak kami yang menyebabkan fitur berbayar tidak dapat digunakan sama sekali.</li>
+        <li>Permintaan refund harus diajukan dalam [isi jumlah] hari sejak transaksi melalui [isi kontak/support server].</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="larangan">
+    <div class="section-label">04</div>
+    <div>
+      <h2>Penggunaan yang Dilarang</h2>
+      <p>Pengguna dilarang untuk:</p>
+      <ul>
+        <li>Menggunakan Bot untuk tujuan ilegal, termasuk namun tidak terbatas pada penipuan, pelecehan, atau pelanggaran hukum yang berlaku.</li>
+        <li>Melakukan reverse-engineering, mendekompilasi, atau mencoba mengakses kode sumber Bot tanpa izin.</li>
+        <li>Menyalahgunakan, membanjiri (spam), atau membebani sistem Bot secara berlebihan (abuse rate-limit).</li>
+        <li>Menjual kembali, mendistribusikan ulang, atau membuat layanan turunan dari Bot tanpa izin tertulis dari kami.</li>
+        <li>Menggunakan Bot dengan cara yang melanggar Ketentuan Layanan (Terms of Service) dan Kebijakan Pengembang (Developer Policy) milik Discord.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="ip">
+    <div class="section-label">05</div>
+    <div>
+      <h2>Hak Kekayaan Intelektual</h2>
+      <p>Seluruh kode, desain, nama, dan aset terkait Bot adalah milik pengembang FiveM Player Finder, kecuali data pihak ketiga (misalnya data server/pemain FiveM) yang tetap menjadi milik penyedia aslinya (Cfx.re/FiveM).</p>
+    </div>
+  </section>
+
+  <section id="ketersediaan">
+    <div class="section-label">06</div>
+    <div>
+      <h2>Ketersediaan Layanan</h2>
+      <p>Kami berupaya menjaga Bot tetap aktif dan berjalan dengan baik, namun tidak menjamin layanan akan tersedia 100% tanpa gangguan (downtime), termasuk gangguan yang disebabkan oleh pihak ketiga (Discord, penyedia API FiveM, hosting, dll). Kami tidak bertanggung jawab atas kerugian yang timbul akibat downtime tersebut.</p>
+    </div>
+  </section>
+
+  <section id="tanggung-jawab">
+    <div class="section-label">07</div>
+    <div>
+      <h2>Batasan Tanggung Jawab</h2>
+      <p>Bot disediakan "sebagaimana adanya" (as is) tanpa jaminan apapun. Kami tidak bertanggung jawab atas:</p>
+      <ul>
+        <li>Kerugian langsung maupun tidak langsung akibat penggunaan atau ketidaktersediaan Bot.</li>
+        <li>Akurasi data yang ditampilkan, karena data bersumber dari API pihak ketiga di luar kendali kami.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="perubahan-ketentuan">
+    <div class="section-label">08</div>
+    <div>
+      <h2>Perubahan Ketentuan</h2>
+      <p>Kami dapat memperbarui Ketentuan ini dari waktu ke waktu. Perubahan akan diumumkan melalui [isi: server Discord support / changelog bot]. Penggunaan Bot setelah perubahan berlaku dianggap sebagai persetujuan terhadap Ketentuan yang baru.</p>
+    </div>
+  </section>
+
+  <section id="penghentian">
+    <div class="section-label">09</div>
+    <div>
+      <h2>Penghentian Layanan</h2>
+      <p>Kami berhak menghentikan atau membatasi akses Bot bagi pengguna yang melanggar Ketentuan ini, tanpa pemberitahuan sebelumnya, termasuk tanpa pengembalian dana untuk subscription yang sedang berjalan jika penghentian disebabkan oleh pelanggaran Pengguna.</p>
+    </div>
+  </section>
+
+  <section id="hukum">
+    <div class="section-label">10</div>
+    <div>
+      <h2>Hukum yang Berlaku</h2>
+      <p>Ketentuan ini diatur dan ditafsirkan berdasarkan hukum Republik Indonesia.</p>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <div class="section-label">11</div>
+    <div>
+      <h2>Kontak</h2>
+      <p>Untuk pertanyaan terkait Ketentuan ini, silakan hubungi kami melalui:</p>
+      <ul>
+        <li>Server Discord Support: <a href="#">[isi link]</a></li>
+        <li>Email: <a href="mailto:isi@email.com">[isi email]</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © [isi tahun] FiveM Player Finder — Syarat &amp; Ketentuan Layanan
+</footer>
+
+</body>
+</html>
